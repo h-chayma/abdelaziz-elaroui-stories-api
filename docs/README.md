@@ -9,9 +9,7 @@ Welcome to **Eleroui Stories API**! This API offers simple access to a collectio
   <a href="https://elaroui-stories-api.vercel.app/"><strong>Documentation</strong></a>
 </p>
 
-<p align="center">
-  <img src="src/assets/screenshots/home.png" alt="Screenshot of Adbaziz Eleroui Stories API" width="600"/>
-</p>
+![Screenshot of Eleroui Stories API](src/assets/screenshots/home.png)
 
 ## Features
 
