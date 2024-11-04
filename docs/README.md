@@ -1,55 +1,126 @@
-# Starlight Starter Kit: Basics
+# Adbaziz Eleroui Stories API
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Welcome to **Adbaziz Eleroui Stories API**! This API offers simple access to a collection of stories, each featuring a title, content, date, and YouTube video link. It's perfect for developers who want to add story content easily to their applications.
 
+---
+
+**Demo** | **Documentation**
+
+## Features
+
+- 📚 Fetch all stories
+- ℹ️ Retrieve details of a single story
+- 🎥 Access associated YouTube videos
+- 🔥 Example integration with Angular
+
+---
+
+## Quick Start
+
+Follow these steps to set up Adbaziz Eleroui Stories API locally:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/adbaziz-eleroui-stories-api.git
+   cd adbaziz-eleroui-stories-api
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the Server**:
+   ```bash
+   npm start
+   ```
+
+   This will start the API server on `http://localhost:3000`.
+
+---
+
+## Endpoints
+
+### List All Stories
+
+Fetch a list of all stories available.
+
+- **Endpoint**: `GET /stories`
+
+- **Example Response**:
+   ```json
+   [
+     {
+       "id": 1,
+       "title": "Sample Story",
+       "date": "2023-01-01",
+       "content": "Story content here.",
+       "youtubeVideoId": "abcd1234"
+     }
+     // Additional stories here
+   ]
+   ```
+
+### Get Story by ID
+
+Retrieve details of a specific story using its unique ID.
+
+- **Endpoint**: `GET /stories/:id`
+
+- **Example Response**:
+   ```json
+   {
+     "id": 1,
+     "title": "Sample Story",
+     "date": "2023-01-01",
+     "content": "Story content here.",
+     "youtubeVideoId": "abcd1234"
+   }
+   ```
+
+---
+
+## Response Format
+
+The API returns data in the following structure:
+
+```typescript
+interface Story {
+  id: number;
+  title: string;
+  date: string;
+  content: string;
+  youtubeVideoId: string;
+}
 ```
-npm create astro@latest -- --template starlight
+
+---
+
+## Angular Integration Example
+
+If you’re using Angular, here’s a quick example of setting up a service to fetch stories:
+
+```typescript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StoriesService {
+  private apiUrl = 'http://localhost:3000/stories';
+
+  constructor(private http: HttpClient) {}
+
+  getAllStories(): Observable<any> {
+    return this.http.get(`${this.apiUrl}`);
+  }
+
+  getStoryById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${id}`);
+  }
+}
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
-
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Now, you're all set to explore and integrate the Adbaziz Eleroui Stories API into your projects. Enjoy building!
