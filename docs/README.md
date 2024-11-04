@@ -6,7 +6,7 @@ Welcome to **Eleroui Stories API**! This API offers simple access to a collectio
 
 [**Demo**](https://elarouitales.netlify.app/) | [**Documentation**](https://elaroui-stories-api.vercel.app/)
 
-![Screenshot of Eleroui Stories API](docs/src/assets/screenshots/home.png)
+![Screenshot of Eleroui Stories API](src/assets/screenshots/home.png)
 
 ## Features
 
@@ -23,8 +23,8 @@ Follow these steps to set up Eleroui Stories API locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/adbaziz-eleroui-stories-api.git
-   cd adbaziz-eleroui-stories-api
+   git clone https://github.com/h-chayma/abdelaziz-elaroui-stories-api.git
+   cd abdelaziz-elaroui-stories-api
    ```
 
 2. **Install Dependencies**:
