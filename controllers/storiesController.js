@@ -14,5 +14,5 @@ exports.getStoryById = (req, res) => {
 };
 
 exports.showHome = (req, res) => {
-    res.send('<h1>Welcome!</h1><p>Visit the <a href="/docs">documentation</a> for more information.</p>');
+    res.send('<h1>Welcome!</h1><p>Visit the <a href="https://elaroui-stories-api.vercel.app/introduction">documentation</a> for more information.</p>');
 };
