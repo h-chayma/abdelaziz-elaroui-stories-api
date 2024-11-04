@@ -2,7 +2,7 @@
 
 Welcome to **Eleroui Stories API**! This API offers simple access to a collection of stories, each featuring a title, content, date, and YouTube video link. It's perfect for developers who want to add story content easily to their applications.
 
-----
+<hr>
 
 [**Demo**](https://elarouitales.netlify.app/) | [**Documentation**](https://elaroui-stories-api.vercel.app/)
 
