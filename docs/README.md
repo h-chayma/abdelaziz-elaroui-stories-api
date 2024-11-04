@@ -1,10 +1,12 @@
-# Adbaziz Eleroui Stories API
+# Eleroui Stories API
 
-Welcome to **Adbaziz Eleroui Stories API**! This API offers simple access to a collection of stories, each featuring a title, content, date, and YouTube video link. It's perfect for developers who want to add story content easily to their applications.
+Welcome to **Eleroui Stories API**! This API offers simple access to a collection of stories, each featuring a title, content, date, and YouTube video link. It's perfect for developers who want to add story content easily to their applications.
 
----
+----
 
-**Demo** | **Documentation**
+[**Demo**](https://elarouitales.netlify.app/) | [**Documentation**](https://elaroui-stories-api.vercel.app/)
+
+![Screenshot of Eleroui Stories API](docs/src/assets/screenshots/home.png)
 
 ## Features
 
@@ -13,11 +15,11 @@ Welcome to **Adbaziz Eleroui Stories API**! This API offers simple access to a c
 - 🎥 Access associated YouTube videos
 - 🔥 Example integration with Angular
 
----
+----
 
 ## Quick Start
 
-Follow these steps to set up Adbaziz Eleroui Stories API locally:
+Follow these steps to set up Eleroui Stories API locally:
 
 1. **Clone the Repository**:
    ```bash
@@ -37,7 +39,7 @@ Follow these steps to set up Adbaziz Eleroui Stories API locally:
 
    This will start the API server on `http://localhost:3000`.
 
----
+----
 
 ## Endpoints
 
@@ -78,7 +80,7 @@ Retrieve details of a specific story using its unique ID.
    }
    ```
 
----
+----
 
 ## Response Format
 
@@ -94,7 +96,7 @@ interface Story {
 }
 ```
 
----
+----
 
 ## Angular Integration Example
 
@@ -123,4 +125,4 @@ export class StoriesService {
 }
 ```
 
-Now, you're all set to explore and integrate the Adbaziz Eleroui Stories API into your projects. Enjoy building!
+Now, you're all set to explore and integrate the Eleroui Stories API into your projects. Enjoy building!
