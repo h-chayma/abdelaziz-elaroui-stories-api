@@ -1,0 +1,69 @@
+---
+title: "Quick Start"
+---
+
+Get up and running with the **El Aroui Stories API** by following these steps.
+
+## 1. Clone the Repository
+
+Start by cloning the API repository. Open your terminal and run:
+
+```bash
+git clone https://github.com/yourusername/elaroui-stories-api
+```
+
+## 2. Navigate to the Project Directory
+
+Once cloned, navigate to the project directory:
+
+```bash
+cd elaroui-stories-api
+```
+
+## 3. Install Dependencies
+
+Install all required dependencies:
+
+```bash
+npm install
+```
+
+## 4. Start the Server
+Run the following command to start the server locally:
+
+```bash
+npm run start
+```
+
+This will start the server on http://localhost:3000.
+
+### Making Your First Request
+Once the server is running, you can make requests to the API endpoints. For example, to retrieve all stories, use a tool like Postman or cURL to make a GET request:
+
+Endpoint:
+
+```bash
+GET http://localhost:3000/stories
+```
+
+Example Response:
+
+```bash
+[
+  {
+    "id": 1,
+    "title": "يا قاتل الروح",
+    "date": "2024-10-22",
+    "story": "قالك في قديم الزمان فمّا راجل يعيش هو و زوجته في كوخ في القرية ...", 
+    "youtubeId": "Bj-LeBk8p-E"
+  },
+  // ... more stories
+]
+```
+
+Now you're ready to start exploring the stories and integrating them into your projects!
+
+### Additional Sections Explained
+
+- **Making Your First Request**: This provides a practical example of how to use the API after setup.
+- **Example Response**: Shows what users can expect, making it easy to understand the response format.

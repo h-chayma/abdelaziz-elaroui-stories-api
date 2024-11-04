@@ -1,0 +1,48 @@
+---
+title: Stories List
+---
+
+### `GET /stories`
+
+The **Get All Stories** endpoint retrieves a list of all available Adbaziz Eleroui stories, including their titles, publication dates, full text, and YouTube video IDs.
+
+## Example Request
+
+You can make a request with any HTTP client like `curl` or Postman:
+
+```bash
+curl -X GET http://localhost:3000/stories
+```
+
+## Example Response
+
+A successful response will return an array of story objects structured as follows:
+
+```json
+[
+  {
+    "id": 1,
+    "title": "يا قاتل الروح",
+    "date": "2024-10-22",
+    "story": "قالك في قديم الزمان فمّا راجل يعيش هو و زوجته في كوخ في القرية ...", 
+    "youtubeId": "Bj-LeBk8p-E"
+  },
+  {
+    "id": 2,
+    "title": "بنت السلطان و المكتوب",
+    "date": "2024-10-22",
+    "story": "يحكيو على سلطان، و ما سلطان إلا الله، عندو بنتو إلا هي ...", 
+    "youtubeId": "xRXB5efkP3I"
+  },
+]
+```
+
+## Notes 
+
+Each story object contains:
+
+- **id**: A unique identifier for the story.
+- **title**: The title of the story.
+- **date**: The publication date of the story.
+- **story**: The full content of the story.
+- **youtubeId**: The associated YouTube video ID.

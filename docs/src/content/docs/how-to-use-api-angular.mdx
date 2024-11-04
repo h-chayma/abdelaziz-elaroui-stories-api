@@ -1,0 +1,114 @@
+---
+title: "El Aroui Stories Website Example"
+---
+
+This section demonstrates how to integrate the El Aroui Stories API into an Angular application. You will learn how to fetch stories and display them in a simple web application.
+
+## Prerequisites
+
+Make sure you have the following installed:
+- Node.js (version 12 or later)
+- Angular CLI
+
+## Installation
+
+1. **Create a new Angular project**:
+
+```bash
+   ng new el-aroui-stories
+   cd el-aroui-stories
+```
+
+2. **Install Axios for making HTTP requests**:
+
+```bash
+npm install axios
+```
+
+## Fetching Stories
+You can fetch stories from the API using the following example code. Create a service to handle API requests.
+
+### Create the Service
+
+Create a file named `stories.service.ts` in the `src/app` directory:
+
+```bash
+// src/app/stories.service.ts
+import { Injectable } from '@angular/core';
+import axios from 'axios';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StoriesService {
+  private apiUrl = 'http://localhost:3000/stories';
+
+  constructor() {}
+
+  async getAllStories() {
+    try {
+      const response = await axios.get(this.apiUrl);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching stories:', error);
+      throw error;
+    }
+  }
+}
+```
+
+### Using the Service in a Component
+
+Next, use the `StoriesService` in a component to display the stories. For example, update the `app.component.ts`:
+
+```bash
+// src/app/app.component.ts
+import { Component, OnInit } from '@angular/core';
+import { StoriesService } from './stories.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  stories: any[] = [];
+
+  constructor(private storiesService: StoriesService) {}
+
+  ngOnInit() {
+    this.loadStories();
+  }
+
+  async loadStories() {
+    this.stories = await this.storiesService.getAllStories();
+  }
+}
+```
+
+### Displaying Stories in the Template
+
+Finally, update the `app.component.html` file to display the stories:
+
+```bash
+<!-- src/app/app.component.html -->
+<h1>El Aroui Stories</h1>
+<ul>
+  <li *ngFor="let story of stories">
+    <h2>{{ story.title }}</h2>
+    <p>{{ story.story }}</p>
+    <p><strong>Date:</strong> {{ story.date }}</p>
+    <iframe width="560" height="315" [src]="'https://www.youtube.com/embed/' + story.youtube_video_id" frameborder="0" allowfullscreen></iframe>
+  </li>
+</ul>
+```
+
+### Running the Application
+Now you can run your application:
+
+```bash
+ng serve
+```
+
+Open your browser and navigate to http://localhost:4200 to see the stories displayed!
+

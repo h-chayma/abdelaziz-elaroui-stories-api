@@ -1,0 +1,37 @@
+---
+title: Get Story by ID
+---
+
+### `GET /stories/:id`
+
+The **Get Story by ID** endpoint retrieves detailed information about a specific story based on its unique identifier. This includes the story's title, publication date, full text, and YouTube video ID.
+
+## Parameters
+
+- `id` (string): The unique identifier of the story you want to retrieve.
+
+## Example Request
+
+You can make a request using any HTTP client, such as `curl` or Postman. Replace `:id` with the actual story ID.
+
+```bash
+curl -X GET http://localhost:3000/stories/1
+```
+
+## Example Response
+
+A successful response will return a single story object structured as follows:
+
+```json
+{
+  "id": 1,
+  "title": "يا قاتل الروح",
+  "date": "2024-10-22",
+  "story": "قالك في قديم الزمان فمّا راجل يعيش هو و زوجته في كوخ في القرية ...", 
+  "youtubeId": "Bj-LeBk8p-E"
+}
+```
+
+## Notes 
+
+If the story with the specified ID does not exist, the API may return a 404 Not Found status with a message indicating that the story was not found.
