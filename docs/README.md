@@ -4,9 +4,14 @@ Welcome to **Eleroui Stories API**! This API offers simple access to a collectio
 
 ----
 
-[**Demo**](https://elarouitales.netlify.app/) | [**Documentation**](https://elaroui-stories-api.vercel.app/)
+<p align="center">
+  <a href="https://elarouitales.netlify.app/"><strong>Demo</strong></a> |
+  <a href="https://elaroui-stories-api.vercel.app/"><strong>Documentation</strong></a>
+</p>
 
-![Screenshot of Eleroui Stories API](src/assets/screenshots/home.png)
+<p align="center">
+  <img src="src/assets/screenshots/home.png" alt="Screenshot of Adbaziz Eleroui Stories API" width="600"/>
+</p>
 
 ## Features
 
